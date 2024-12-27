@@ -30,12 +30,19 @@ export default function App() {
         {/* Header Section */}
         <View style={styles.header}>
           <View style={styles.switchContainer}>
-            <Text style={[styles.switchText, theme === "dark" && { color: "white" }]}>
+            <Text
+              style={[
+                styles.switchText,
+                theme === "dark" && { color: "white" },
+              ]}
+            >
               {theme === "light" ? "Light Mode" : "Dark Mode"}
             </Text>
             <Switch
               value={theme === "dark"}
-              onValueChange={() => setTheme(theme === "light" ? "dark" : "light")}
+              onValueChange={() =>
+                setTheme(theme === "light" ? "dark" : "light")
+              }
             />
           </View>
         </View>
@@ -47,7 +54,9 @@ export default function App() {
             <Text
               style={[
                 styles.result,
-                input.length > 12 ? { fontSize: 36 - (input.length - 12) * 2 } : {}, // Shrink font for long inputs
+                input.length > 12
+                  ? { fontSize: 36 - (input.length - 12) * 2 }
+                  : {}, // Shrink font for long inputs
               ]}
               numberOfLines={1} // Prevent text overflow
               adjustsFontSizeToFit // Automatically adjust font size
@@ -80,7 +89,7 @@ export default function App() {
               theme === "dark" ? { color: "white" } : { color: "black" }, // Adjust text color for visibility
             ]}
           >
-            Calculator made by Tushar Gosavi
+            Calculator made by Minal Meshram.
           </Text>
         </View>
       </SafeAreaView>
